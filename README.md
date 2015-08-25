@@ -1,8 +1,7 @@
-Stouts.collectd
+collectd-ansible
 ==========
 
-[![Build Status](http://img.shields.io/travis/Stouts/Stouts.collectd.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.collectd)
-[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.collectd-blue.svg?style=flat-square)](https://galaxy.ansible.com/list#/roles/1960)
+This was forked from Stouts.ansible to provide apt package installation
 
 Ansible role which help you with:
 
@@ -12,8 +11,7 @@ Ansible role which help you with:
 
 ```yaml
 collectd_enabled: yes               # Enable the role
-collectd_version: 5.4.1             # Set version
-collectd_prefix: /opt/collectd      # The place where Collectd will be installed
+collectd_apt_state: present
 
 # General options
 collectd_interval: 10
@@ -64,11 +62,6 @@ collectd_logrotate_options:
   - size 10M
 ```
 
-
-#### Usage
-
-Add `Stouts.collectd` to your roles and set vars in your playbook file.
-
 Example:
 
 ```yaml
@@ -89,7 +82,3 @@ Example:
 #### License
 
 Licensed under the MIT License. See the LICENSE file for details.
-
-#### Feedback, bug-reports, requests, ...
-
-Are [welcome](https://github.com/Stouts/Stouts.collectd/issues)!

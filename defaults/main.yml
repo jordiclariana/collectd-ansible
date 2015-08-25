@@ -1,12 +1,13 @@
 ---
-
 collectd_enabled: yes               # Enable the role
-collectd_version: 5.4.1             # Set version
-collectd_prefix: /opt/collectd      # The place where Collectd will be installed
-collectd_prefix_type: "{{collectd_prefix}}/etc"
-collectd_prefix_conf: "{{collectd_prefix}}/etc"
-collectd_prefix_sbin: "{{collectd_prefix}}/sbin"
-collectd_plugins_prefix: "{{collectd_prefix_conf}}/conf.d"
+
+# apt install options
+collectd_apt_state: present
+
+collectd_conf_path: /etc/collectd      # The place where Collectd configuration is stored
+collectd_types_path: "{{collectd_conf_path}}"
+collectd_sbin_path: "/usr/sbin"
+collectd_plugins_path: "{{collectd_conf_path}}/conf.d"
 
 # General options
 collectd_interval: 10
