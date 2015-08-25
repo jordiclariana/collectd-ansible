@@ -1,7 +1,7 @@
 collectd-ansible
 ==========
 
-This was forked from Stouts.ansible to provide apt package installation
+This was forked from **Stouts.ansible** to provide apt package installation
 
 Ansible role which help you with:
 
@@ -69,7 +69,7 @@ Example:
 - hosts: all
 
   roles:
-    - Stouts.collectd
+    - Draiken.collectd
 
   vars:
     collectd_write_graphite: yes
