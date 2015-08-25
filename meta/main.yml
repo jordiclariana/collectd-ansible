@@ -3,8 +3,8 @@
 dependencies: []
 
 galaxy_info:
-  author: klen
-  company: Stouts
+  author: Draiken
+  company: Replay Gaming
   description: Ansible role to install and setup Collectd
   license: MIT
   platforms:
