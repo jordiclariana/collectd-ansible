@@ -4,7 +4,7 @@
 # General options
 Interval     {{ collectd_interval }}
 ReadThreads  {{ collectd_readthreads }}
-TypesDB /usr/share/collectd/types.db
+TypesDB "/usr/share/collectd/types.db"
 TypesDB "{{collectd_types_path}}/types.db"
 {% if collectd_hostname %}Hostname {{ collectd_hostname }}
 {% endif %}
