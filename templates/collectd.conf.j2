@@ -4,7 +4,9 @@
 # General options
 Interval     {{ collectd_interval }}
 ReadThreads  {{ collectd_readthreads }}
+{% if collectd_types is defined and collectd_types | length > 0 %}
 TypesDB "{{collectd_types_path}}/types.db"
+{% endif %}
 {% if collectd_hostname %}Hostname {{ collectd_hostname }}
 {% endif %}
 FQDNLookup {{ 'true' if collectd_fdqnlookup else 'false' }}
